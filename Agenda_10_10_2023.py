@@ -18,3 +18,12 @@ def imprimir_usuario(usuario):
         print(f"Email {usuario['Email']}")
         print("*************************************")
         print("\n")
+        
+#atualizar_usuario
+def atualizar_usuario(usuarios, indice, nome, email, telefone):
+     if indice >= 0 and indice < len(usuarios):
+        usuarios[indice]['Nome'] = nome
+        usuarios[indice]['Email'] = email
+        usuarios[indice]['Telefone'] = telefone
+        print("Usuario atualizado com sucesso!")
+        print("**********************************")
