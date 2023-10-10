@@ -19,9 +19,21 @@ def imprimir_usuario(usuario):
         print("*************************************")
         print("\n")
 
+
 #deletar
 def deletar_usuario(usuarios,indice):
     if indice >= 0 and indice < len(usuarios):
         del usuarios[indice]
         print("Aluno deletado com sucesso!")
         print("*************************************")
+
+        
+#atualizar_usuario
+def atualizar_usuario(usuarios, indice, nome, email, telefone):
+     if indice >= 0 and indice < len(usuarios):
+        usuarios[indice]['Nome'] = nome
+        usuarios[indice]['Email'] = email
+        usuarios[indice]['Telefone'] = telefone
+        print("Usuario atualizado com sucesso!")
+        print("**********************************")
+
