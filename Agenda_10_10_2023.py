@@ -1,5 +1,5 @@
 #cadastro de produto
-def cadastra_produto(usuarios,nome,telefone,email):
+def cadastra_usuario(usuarios,nome,telefone,email):
     usuario={
                 'Nome' : nome,
                 'Telefone' : telefone,
@@ -18,3 +18,10 @@ def imprimir_usuario(usuario):
         print(f"Email {usuario['Email']}")
         print("*************************************")
         print("\n")
+
+#deletar
+def deletar_usuario(usuarios,indice):
+    if indice >= 0 and indice < len(usuarios):
+        del usuarios[indice]
+        print("Aluno deletado com sucesso!")
+        print("*************************************")
