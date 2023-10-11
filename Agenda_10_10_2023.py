@@ -25,7 +25,7 @@ def imprimir_usuario(usuario):
 def deletar_usuario(usuarios,indice):
     if indice >= 0 and indice < len(usuarios):
         del usuarios[indice]
-        print("Aluno deletado com sucesso!")
+        print("Usuario deletado com sucesso!")
         print("*************************************")
 
         
