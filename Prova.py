@@ -1,4 +1,6 @@
 
+import datetime
+
 def adicionar_tarefas(tarefas, titulo, descricao, data_vencimento):
     tarefa = {
         'Titulo': titulo,
@@ -24,7 +26,7 @@ def excluir_tarefa(tarefas, indice):
         print("Tarefa deletada com sucesso!")
         print("*************************************")
     else:
-        print("Índice inválido. A tarefa não foi excluída.")
+        print("Índice inválido.")
 
 def editar_tarefas(tarefas, indice, titulo, descricao, data_vencimento):
     if indice >= 0 and indice < len(tarefas):
@@ -34,7 +36,7 @@ def editar_tarefas(tarefas, indice, titulo, descricao, data_vencimento):
         print("Tarefa editada com sucesso!")
         print("**********************************")
     else:
-        print("Índice inválido. A tarefa não foi editada.")
+        print("Índice inválido.")
 
 def converter_data(data_str):
     dia, mes, ano = map(int, data_str.split('/'))
