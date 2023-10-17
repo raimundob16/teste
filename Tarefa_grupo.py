@@ -9,19 +9,17 @@ def cadastra_usuario(usuarios, nome, telefone, email):
     }
     usuarios.append(usuario)
 
-# Função para salvar os usuários em um arquivo CSV
 def salvar_usuarios(usuarios):
-    with open('usuarios.csv', 'w', newline='') as arquivo_csv:
-        campos = ['Nome', 'Telefone', 'Email']
-        escritor_csv = csv.DictWriter(arquivo_csv, fieldnames=campos)
-        escritor_csv.writeheader()
+    with open('arquivos.csv', mode='w', newline='') as arquivos_csv:
+        writer = csv.writer(arquivos_csv)
+        writer.writerow(["Nome", "Email", "Telefone"])  # Escreve o cabeçalho no arquivo CSV
         for usuario in usuarios:
-            escritor_csv.writerow(usuario)
+            writer.writerow([usuario['Nome'], usuario['Email'], usuario['Telefone']])
 
 # Função principal
 def main():
     usuarios = []
-    
+
     while True:
         print("\nEscolha uma opção:")
         print("1. Cadastrar usuário")
@@ -48,3 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
